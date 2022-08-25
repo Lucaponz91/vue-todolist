@@ -14,7 +14,8 @@ const todos = [{
 const app = new Vue({
     el: '#root',
     data: {
-        todos
+        todos,
+        newTask: ''
 
     },
     methods: {
@@ -25,8 +26,18 @@ const app = new Vue({
             } else {
                 todo.done = true
             }
+        },
+        addTask() {
+            console.log('funge')
+            this.todos.push({
+                text: this.newTask,
+                done: false,
+            })
+            this.newTask=''
+
         }
-    }
+
+    },
 
 })
 
