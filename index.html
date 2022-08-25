@@ -22,10 +22,10 @@
             </div>
             <div class="container">
                 <ul class="todo_list">
-                    <li v-for="todo in todos" class="todo"
-                    :class="todo.done ? 'done' : ''" >
+                    <li v-for="todo in todos"
+                    :class="[todo.done ? 'done' : '']" >
                         {{todo.text}}
-                        <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-xmark" @click="toggleDone(todo)"></i>
                     </li>
                     <!-- <li>spesa</li>
                     <li>cane</li>

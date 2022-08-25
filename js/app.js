@@ -17,5 +17,18 @@ const app = new Vue({
         todos
 
     },
+    methods: {
+        toggleDone(todo) {
+            console.log('funge')
+            if (todo.done === true) {
+                todo.done = false
+            } else {
+                todo.done = true
+            }
+        }
+    }
 
 })
+
+const done = false
+const tasks = [done ? 'done' : '', 'todo']
