@@ -11,6 +11,7 @@ const todos = [{
     done: true
 }
 ]
+// Vue
 const app = new Vue({
     el: '#root',
     data: {
@@ -40,6 +41,6 @@ const app = new Vue({
     },
 
 })
-
+// end Vue
 const done = false
 const tasks = [done ? 'done' : '', 'todo']
